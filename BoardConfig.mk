@@ -188,3 +188,4 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/juice/BoardConfigVendor.mk
+ 

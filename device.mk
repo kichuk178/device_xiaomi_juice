@@ -23,11 +23,7 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     vendor/qcom/opensource/commonsys/packages/apps/Bluetooth \
     vendor/qcom/opensource/commonsys/system/bt/conf
-
-# PPUI Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-ppui
-
+    
 PRODUCT_BUILD_SUPER_PARTITION := false
 BOARD_BUILD_PRODUCT_IMAGE := true
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -59,6 +55,10 @@ PRODUCT_PACKAGES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     BluetoothQti
+
+# Camera
+PRODUCT_PACKAGES += \
+    Snap
 
 # Display
 PRODUCT_PACKAGES += \
@@ -103,14 +103,10 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.juice \
+    android.hardware.power-service-qti \
     vendor.qti.hardware.perf@2.0 \
     vendor.qti.hardware.perf@2.1 \
     vendor.qti.hardware.perf@2.2
-
-# Prebuilds
-PRODUCT_PACKAGES += \
-    Gcamgo
 
 # Properties
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
@@ -163,4 +159,3 @@ PRODUCT_PACKAGES += \
 
 -include $(LOCAL_PATH)/product_prop.mk
 -include $(LOCAL_PATH)/system_prop.mk
- 

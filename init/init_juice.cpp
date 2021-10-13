@@ -78,3 +78,4 @@ void vendor_load_properties() {
         property_override("ro.product.device", "pomelo");
     }
 }
+ 
